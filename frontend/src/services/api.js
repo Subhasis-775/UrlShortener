@@ -1,0 +1,6 @@
+import axios from 'axios';
+const API=axios.create({
+    baseURL:'http://localhost:5000',
+})
+
+export const shortenUrl=(longUrl)=>API.post('/shorten',{longUrl}); 
